@@ -1,0 +1,42 @@
+
+units           real
+atom_style      angle
+boundary        p p p 
+bond_style      harmonic
+pair_style      table linear 1001 
+angle_style     table linear 1001
+read_data       accepted.lammps
+
+bond_coeff      1 113.746321 2.573622
+pair_coeff      1 1 ../pair.table.EE.44 EE
+angle_coeff     1 ../angle.table.EEE.44 EEE
+neighbor        3.0 bin
+special_bonds   lj/coul 0.0 0.0 1.0 
+
+# Freeze top crystalline and bottom crystalline regions.
+include         movable_atoms
+group           frozen_atoms subtract all movable_atoms
+
+# Accelerate computation by turning off the pairwise interactions among frozen atoms.
+neigh_modify    delay 0 every 1 check yes exclude group frozen_atoms frozen_atoms
+fix             1 frozen_atoms setforce 0.0 0.0 0.0
+
+
+# Equilibration step - NVT
+velocity        movable_atoms create 460 52384
+fix             2 movable_atoms nvt temp 460 460 100
+timestep        5.0
+thermo_style    custom step temp press etotal ke pe epair ebond eangle enthalpy vol
+thermo          50
+run             1000
+unfix 2
+
+# Equilibration step - NVE
+fix             2 movable_atoms nve
+
+thermo_style    custom step temp press etotal ke pe epair ebond eangle vol
+thermo          20
+timestep        1
+run             500
+write_data      trial.lammps
+

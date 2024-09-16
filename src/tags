@@ -1,0 +1,299 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AtomSet	compute.h	/^typedef std::vector<int> AtomSet;$/;"	t
+AtomSet	md_system.h	/^typedef std::vector<int> AtomSet;$/;"	t
+AtomSet	slip.h	/^typedef std::vector<int> AtomSet;$/;"	t
+BinTable	bintable/bintable.cpp	/^    BinTable::BinTable(double cutoff, int step, const CgSystem *cg) { $/;"	f	class:cg::BinTable
+BinTable	bintable/bintable.h	/^    class BinTable {$/;"	c	namespace:cg
+Builder	builder.cpp	/^Builder::Builder(const Geometry &g, MDSystem &s, const InputFile &opt) $/;"	f	class:Builder
+Builder	builder.h	/^class Builder {$/;"	c
+CS	slip.h	/^typedef std::vector<FVector<3>> CS;$/;"	t
+Compute	compute.cpp	/^Compute::Compute(const Geometry &g, MDSystem &s, const InputFile &opt) $/;"	f	class:Compute
+Compute	compute.h	/^class Compute {$/;"	c
+DX	md_system.h	/^    FVector<3> DX;$/;"	m	struct:StepData
+FMatrix	fmatrix.h	/^class FMatrix {$/;"	c
+FVector	fvector.h	/^    FVector() {}$/;"	f	class:FVector
+FVector	fvector.h	/^FVector<N>::FVector(std::initializer_list<double> x) {$/;"	f	class:FVector
+FVector	fvector.h	/^class FVector {$/;"	c
+Geometry	geometry.cpp	/^Geometry::Geometry(const InputFile &opt) $/;"	f	class:Geometry
+Geometry	geometry.h	/^class Geometry {$/;"	c
+InputFile	input_file.cpp	/^InputFile::InputFile(std::string path) {$/;"	f	class:InputFile
+InputFile	input_file.h	/^class InputFile {$/;"	c
+LU	fmatrix.h	/^    FMatrix<N,N> LU;$/;"	m	struct:LUDecomposition
+LUDecomposition	fmatrix.h	/^struct LUDecomposition {$/;"	s
+MDSystem	md_system.h	/^class MDSystem {$/;"	c
+MY_CLOCK	timer.h	/^    static const int MY_CLOCK = CLOCK_REALTIME;$/;"	m	class:Timer
+MonteCarlo	end_bridge.cpp	/^MonteCarlo::MonteCarlo(const Geometry &g, MDSystem &s, const InputFile &opt) $/;"	f	class:MonteCarlo
+MonteCarlo	end_bridge.h	/^class MonteCarlo {$/;"	c
+Slice	compute.h	/^typedef std::pair<std::vector<double>, std::vector<double>> Slice;$/;"	t
+Slip	slip.cpp	/^Slip::Slip(const Geometry &g, MDSystem &s0, MDSystem &s1, const InputFile &opt) $/;"	f	class:Slip
+Slip	slip.h	/^class Slip {$/;"	c
+SlipSet	slip.h	/^typedef std::vector<double> SlipSet;$/;"	t
+StepData	md_system.h	/^struct StepData {$/;"	s
+Table	table.cpp	/^Table::Table(std::string tablefile) {$/;"	f	class:Table
+Table	table.h	/^class Table {$/;"	c
+Timer	timer.h	/^    Timer() {$/;"	f	class:Timer
+Timer	timer.h	/^class Timer {$/;"	c
+_amorphous_atoms	end_bridge.h	/^    AtomSet _amorphous_atoms;$/;"	m	class:MonteCarlo
+_atom_molecule	md_system.h	/^    std::vector<int> _atom_molecule;$/;"	m	class:MDSystem
+_atom_types	md_system.h	/^    std::vector<int> _atom_types;$/;"	m	class:MDSystem
+_bead_mass	compute.h	/^    double _bead_mass;$/;"	m	class:Compute
+_bins	bintable/bintable.h	/^        std::vector<std::vector<int>> _bins;$/;"	m	class:cg::BinTable
+_block	builder.h	/^    std::string _block;$/;"	m	class:Builder
+_bond_length	compute.h	/^    double _bond_stiffness, _bond_length;$/;"	m	class:Compute
+_bond_stiffness	compute.h	/^    double _bond_stiffness, _bond_length;$/;"	m	class:Compute
+_bond_table	md_system.h	/^    std::vector<std::vector<int>> _bond_table;$/;"	m	class:MDSystem
+_bond_types	md_system.h	/^    std::vector<std::pair<int,int>> _bond_types;$/;"	m	class:MDSystem
+_cgsys	bintable/bintable.h	/^        const CgSystem *_cgsys;$/;"	m	class:cg::BinTable
+_compute_bond_shift	builder.cpp	/^double Builder::_compute_bond_shift() const {$/;"	f	class:Builder
+_crystal_buffer_depth	builder.h	/^    int _crystal_buffer_depth;$/;"	m	class:Builder
+_crystal_buffer_depth	end_bridge.h	/^    int _crystal_buffer_depth;$/;"	m	class:MonteCarlo
+_crystallinity	slip.h	/^    double _n_neighbor, _crystallinity;$/;"	m	class:Slip
+_cutoff	bintable/bintable.h	/^        double _cutoff;$/;"	m	class:cg::BinTable
+_cutoff_distance	compute.h	/^    double _cutoff_distance;$/;"	m	class:Compute
+_cutoff_distance	slip.h	/^    double _cutoff_distance;$/;"	m	class:Slip
+_dy	table.h	/^    std::vector<double> _dy;$/;"	m	class:Table
+_dz	compute.h	/^    double _dz;$/;"	m	class:Compute
+_find_bin	bintable/bintable.cpp	/^    int BinTable::_find_bin(int i) const {$/;"	f	class:cg::BinTable
+_geometry	compute.h	/^    const Geometry &_geometry;$/;"	m	class:Compute
+_geometry	end_bridge.h	/^    const Geometry &_geometry;$/;"	m	class:MonteCarlo
+_geometry	slip.h	/^    const Geometry &_geometry;$/;"	m	class:Slip
+_granularity	bintable/bintable.h	/^        int _granularity;$/;"	m	class:cg::BinTable
+_initial_chain_cut_ratio	builder.h	/^    double _initial_chain_cut_ratio;$/;"	m	class:Builder
+_keyword	table.h	/^    std::string _keyword;$/;"	m	class:Table
+_length_factor	end_bridge.h	/^    double _length_factor;$/;"	m	class:MonteCarlo
+_lower_root_atoms	end_bridge.h	/^    AtomSet _lower_root_atoms;$/;"	m	class:MonteCarlo
+_n_neighbor	slip.h	/^    double _n_neighbor, _crystallinity;$/;"	m	class:Slip
+_options	input_file.h	/^    std::unordered_map<std::string, std::string> _options;$/;"	m	class:InputFile
+_removal_ratio	builder.h	/^    double _removal_ratio;$/;"	m	class:Builder
+_search_radius	end_bridge.h	/^    double _search_radius;$/;"	m	class:MonteCarlo
+_seed_pts	builder.h	/^    std::vector<FVector<3>> _seed_pts;$/;"	m	class:Builder
+_st	compute.h	/^    double _st;$/;"	m	class:Compute
+_step	bintable/bintable.h	/^        int _step;$/;"	m	class:cg::BinTable
+_step	compute.h	/^    int _step;$/;"	m	class:Compute
+_step	md_system.h	/^    StepData _step;$/;"	m	class:MDSystem
+_step	slip.h	/^    int _step;$/;"	m	class:Slip
+_sys0	slip.h	/^    MDSystem &_sys0;$/;"	m	class:Slip
+_sys1	slip.h	/^    MDSystem &_sys1;$/;"	m	class:Slip
+_system	builder.h	/^    MDSystem &_system;$/;"	m	class:Builder
+_system	compute.h	/^    MDSystem &_system;$/;"	m	class:Compute
+_system	end_bridge.h	/^    MDSystem &_system;$/;"	m	class:MonteCarlo
+_t0	timer.h	/^    timespec _t0;$/;"	m	class:Timer
+_trjfile	slip.h	/^    std::string _trjfile;$/;"	m	class:Slip
+_upper_root_atoms	end_bridge.h	/^    AtomSet _upper_root_atoms;$/;"	m	class:MonteCarlo
+_x	fmatrix.h	/^    double _x[I*J];$/;"	m	class:FMatrix
+_x	fvector.h	/^    double _x[N];$/;"	m	class:FVector
+_x	table.h	/^    std::vector<double> _x;$/;"	m	class:Table
+_xbins	bintable/bintable.h	/^        int _xbins, _ybins, _zbins;$/;"	m	class:cg::BinTable
+_y	table.h	/^    std::vector<double> _y;$/;"	m	class:Table
+_ybins	bintable/bintable.h	/^        int _xbins, _ybins, _zbins;$/;"	m	class:cg::BinTable
+_zbins	bintable/bintable.h	/^        int _xbins, _ybins, _zbins;$/;"	m	class:cg::BinTable
+a	geometry.h	/^    const double a, b, c;$/;"	m	class:Geometry
+add_atom	md_system.cpp	/^void MDSystem::add_atom(const FVector<3> &x, int type) {$/;"	f	class:MDSystem
+add_bond	md_system.cpp	/^void MDSystem::add_bond(int i, int j) {$/;"	f	class:MDSystem
+add_option	input_file.h	/^    void add_option(std::string key, std::string value) {$/;"	f	class:InputFile
+amorphous_region	geometry.cpp	/^std::pair<double,double> Geometry::amorphous_region() const {$/;"	f	class:Geometry
+are_bonded	md_system.cpp	/^bool MDSystem::are_bonded(int i, int j) const {$/;"	f	class:MDSystem
+args_to_tuple	string_tools.h	/^std::tuple<A...> args_to_tuple(std::vector<std::string> args, int index) {$/;"	f
+assign_initial_velocity	md_system.h	/^    void assign_initial_velocity(int natoms) { _step.atom_velcs.assign(natoms, zeros<3>()); };$/;"	f	class:MDSystem
+assign_molecules_ids	md_system.cpp	/^int MDSystem::assign_molecules_ids() {$/;"	f	class:MDSystem
+atom_coords	md_system.h	/^    std::vector<FVector<3>> atom_coords; $/;"	m	struct:StepData
+atom_css	md_system.h	/^    std::vector<double> atom_css;$/;"	m	struct:StepData
+atom_mols	md_system.h	/^    std::vector<int> atom_mols;$/;"	m	struct:StepData
+atom_types	md_system.h	/^    std::vector<int> atom_types;$/;"	m	struct:StepData
+atom_velcs	md_system.h	/^    std::vector<FVector<3>> atom_velcs; $/;"	m	struct:StepData
+atom_vms	md_system.h	/^    std::vector<double> atom_vms;$/;"	m	struct:StepData
+atoms_in_slice	md_system.cpp	/^AtomSet MDSystem::atoms_in_slice(int dim, double lo, double hi) const {$/;"	f	class:MDSystem
+avogadros_number	compute.cpp	/^const double avogadros_number = 6.0221413e23;$/;"	v
+avogadros_number	slip.cpp	/^const double avogadros_number = 6.0221413e23;$/;"	v
+b	geometry.h	/^    const double a, b, c;$/;"	m	class:Geometry
+back_solve	fmatrix.h	/^FVector<N> back_solve(const LUDecomposition<N> &lud, const FVector<N> &b) {$/;"	f
+before	string_tools.h	/^inline std::string before(string str, string spl) {$/;"	f
+begin	fmatrix.h	/^    const double* begin() const { return _x; }$/;"	f	class:FMatrix
+begin	fmatrix.h	/^    double* begin() { return _x; }$/;"	f	class:FMatrix
+begin	fvector.h	/^    const double* begin() const { return _x; }$/;"	f	class:FVector
+begin	fvector.h	/^    double* begin() { return _x; }$/;"	f	class:FVector
+bond_angle	compute.cpp	/^double Compute::bond_angle(int i, int j, int k) const {$/;"	f	class:Compute
+bond_image	md_system.h	/^    const FVector<3> bond_image(FVector<3> dx) const {$/;"	f	class:MDSystem
+bond_image	md_system.h	/^    const FVector<3> bond_image(int i, int j) const {$/;"	f	class:MDSystem
+bonded_neighbors	md_system.h	/^    const AtomSet& bonded_neighbors(int id) const { return _bond_table[id]; }$/;"	f	class:MDSystem
+bonds_between_atoms	end_bridge.cpp	/^int MonteCarlo::bonds_between_atoms(int id1, int id2) const {$/;"	f	class:MonteCarlo
+bounds	md_system.h	/^    const FVector<2>& bounds(int i) const { return _step.box[i]; } $/;"	f	class:MDSystem
+bounds	md_system.h	/^    std::vector<FVector<2>> bounds() const { $/;"	f	class:MDSystem
+box	md_system.h	/^    FVector<2> box[3];$/;"	m	struct:StepData
+box_length	md_system.h	/^    const double box_length(int i) const {$/;"	f	class:MDSystem
+build_system	main.cpp	/^void build_system(const InputFile &opt) {$/;"	f
+bv	geometry.h	/^    FVector<3> bv;$/;"	m	class:Geometry
+c	geometry.h	/^    const double a, b, c;$/;"	m	class:Geometry
+cg	bintable/bintable.cpp	/^namespace cg {$/;"	n	file:
+cg	bintable/bintable.h	/^namespace cg {$/;"	n
+cols	fmatrix.h	/^    constexpr int cols() const { return J; }$/;"	f	class:FMatrix
+combine_cols	fmatrix.h	/^inline FMatrix<I, 2*J> combine_cols(const FMatrix<I,J> &A, const FMatrix<I,J> &B) {$/;"	f
+compute_slip	slip.cpp	/^void Slip::compute_slip(std::string out) {$/;"	f	class:Slip
+count_segments	end_bridge.cpp	/^std::vector<AtomSet> MonteCarlo::count_segments(bool report, std::string out) const {$/;"	f	class:MonteCarlo
+cross	fvector.h	/^inline FVector<3> cross(const FVector<3> &x, const FVector<3> &y) {$/;"	f
+cs	md_system.h	/^    const double& cs(int id) const { return _step.atom_css[id]; }$/;"	f	class:MDSystem
+delete_bond	md_system.cpp	/^void MDSystem::delete_bond(int i, int j) {$/;"	f	class:MDSystem
+det	fmatrix.h	/^inline double det(const FMatrix<2,2> &A) {$/;"	f
+det	fmatrix.h	/^inline double det(const FMatrix<3,3> &A) {$/;"	f
+determin_chain_atoms	end_bridge.cpp	/^std::vector<int> MonteCarlo::determin_chain_atoms(int id) const {$/;"	f	class:MonteCarlo
+determin_chain_ends	compute.cpp	/^std::vector<std::vector<int>> Compute::determin_chain_ends() const {$/;"	f	class:Compute
+determine_cut_in_segments	builder.cpp	/^std::map<int,std::pair<int,int>> Builder::determine_cut_in_segments() {$/;"	f	class:Builder
+distance	md_system.h	/^    double distance(int i, int j) const { return norm(bond_image(i, j)); }$/;"	f	class:MDSystem
+dot	fvector.h	/^double dot(const FVector<N> &x, const FVector<N> &y) {$/;"	f
+dot	fvector.h	/^inline double dot(const std::vector<double> &x, const std::vector<double> &y) {$/;"	f
+e2e_squared	compute.cpp	/^double Compute::e2e_squared() const {$/;"	f	class:Compute
+elapsed	timer.h	/^    double elapsed() const {$/;"	f	class:Timer
+elapsed_str	timer.h	/^    std::string elapsed_str() const {$/;"	f	class:Timer
+end	fmatrix.h	/^    const double* end() const { return _x+I*J; }$/;"	f	class:FMatrix
+end	fmatrix.h	/^    double* end() { return _x+I*J; }$/;"	f	class:FMatrix
+end	fvector.h	/^    const double* end() const { return _x+N; }$/;"	f	class:FVector
+end	fvector.h	/^    double* end() { return _x+N; }$/;"	f	class:FVector
+end_atoms	md_system.cpp	/^AtomSet MDSystem::end_atoms() const {$/;"	f	class:MDSystem
+end_bridge	end_bridge.cpp	/^void MonteCarlo::end_bridge() {$/;"	f	class:MonteCarlo
+equilibrium_check	compute.cpp	/^void Compute::equilibrium_check(std::string pairpath, std::string anglepath,$/;"	f	class:Compute
+evaluate	table.cpp	/^double Table::evaluate(double x) const {$/;"	f	class:Table
+evaluate_derivative	table.cpp	/^double Table::evaluate_derivative(double x) const {$/;"	f	class:Table
+exclude_atoms	end_bridge.cpp	/^inline void exclude_atoms(std::vector<int> &A, const std::vector<int> &B) {$/;"	f
+eye	fmatrix.h	/^FMatrix<N,N> eye() {$/;"	f
+find_atoms_within_cutoff	md_system.cpp	/^AtomSet MDSystem::find_atoms_within_cutoff(int id, double radius) const {$/;"	f	class:MDSystem
+find_matching_brace	string_tools.h	/^inline size_t find_matching_brace(const string &s, size_t i) {$/;"	f
+find_nearest_atom	md_system.cpp	/^size_t MDSystem::find_nearest_atom(const FVector<3> &x) const {$/;"	f	class:MDSystem
+from_string	string_tools.h	/^inline T from_string(const std::string &s) {$/;"	f
+generate	builder.cpp	/^void Builder::generate() {$/;"	f	class:Builder
+geometry	builder.h	/^    const Geometry &geometry;$/;"	m	class:Builder
+get	input_file.h	/^    template<typename T> const T get(const std::string &key) const {$/;"	f	class:InputFile
+get_atom_molecule	md_system.cpp	/^int MDSystem::get_atom_molecule(int atom_id) const {$/;"	f	class:MDSystem
+hi_amorphous_z	geometry.h	/^    const int lo_amorphous_z, hi_amorphous_z;$/;"	m	class:Geometry
+index_of	md_system.cpp	/^inline size_t index_of(const Container &c, const T &t) {$/;"	f
+inv	fmatrix.h	/^inline FMatrix<2,2> inv(const FMatrix<2,2> &A) {$/;"	f
+inv	fmatrix.h	/^inline FMatrix<3,3> inv(const FMatrix<3,3> &A) {$/;"	f
+inv	fmatrix.h	/^inline FMatrix<N,N> inv(const FMatrix<N,N> &M) {$/;"	f
+inv_lud	fmatrix.h	/^inline FMatrix<N,N> inv_lud(const FMatrix<N,N> &A) {$/;"	f
+is_amorphous	end_bridge.cpp	/^bool MonteCarlo::is_amorphous(int i) const {$/;"	f	class:MonteCarlo
+is_lower_root	end_bridge.cpp	/^bool MonteCarlo::is_lower_root(int i) const {$/;"	f	class:MonteCarlo
+is_option_set	input_file.h	/^    bool is_option_set(const std::string &key) const {$/;"	f	class:InputFile
+is_root	end_bridge.h	/^    bool is_root(int i) const { return is_lower_root(i) || is_upper_root(i); }$/;"	f	class:MonteCarlo
+is_upper_root	end_bridge.cpp	/^bool MonteCarlo::is_upper_root(int i) const {$/;"	f	class:MonteCarlo
+join	string_tools.h	/^inline std::string join(_Iter beg, _Iter end) {$/;"	f
+join	string_tools.h	/^inline std::string join(const std::vector<std::string> &v, int pos=0, int len=~0)$/;"	f
+linspace	fvector.h	/^FVector<N> linspace(double start, double stop) {$/;"	f
+lo_amorphous_z	geometry.h	/^    const int lo_amorphous_z, hi_amorphous_z;$/;"	m	class:Geometry
+loop_bridge_acceptance_probability	end_bridge.cpp	/^double MonteCarlo::loop_bridge_acceptance_probability(int A, int T1, int T2) const {$/;"	f	class:MonteCarlo
+loop_entry_shift	end_bridge.cpp	/^FVector<2> MonteCarlo::loop_entry_shift(int id, AtomSet roots) const {$/;"	f	class:MonteCarlo
+lower	string_tools.h	/^inline string lower(string s) {$/;"	f
+lower_root_coordinate	geometry.h	/^    double lower_root_coordinate() const { return (lo_amorphous_z-1)*step_z; }$/;"	f	class:Geometry
+lu	fmatrix.h	/^template<int N> LUDecomposition<N> lu(FMatrix<N,N> A) {$/;"	f
+main	main.cpp	/^int main(int argc, char **argv) {$/;"	f
+make_string	string_tools.h	/^inline string make_string(const T& x, int width=-1, int precision=-1) {$/;"	f
+mol	md_system.h	/^    const int& mol(int id) const { return _step.atom_mols[id]; }$/;"	f	class:MDSystem
+neighbors	bintable/bintable.cpp	/^    std::vector<const std::vector<int>*> BinTable::neighbors(int i) const {$/;"	f	class:cg::BinTable
+norm	fmatrix.h	/^double norm(const FMatrix<I,J> &A) {$/;"	f
+norm	fvector.h	/^double norm(const FVector<I> &x) {$/;"	f
+nx	geometry.h	/^    const int nx, ny, nz;$/;"	m	class:Geometry
+ny	geometry.h	/^    const int nx, ny, nz;$/;"	m	class:Geometry
+nz	geometry.h	/^    const int nx, ny, nz;$/;"	m	class:Geometry
+operator ()	fmatrix.h	/^    double operator()(int i, int j) const { return _x[i+j*I]; } $/;"	f	class:FMatrix
+operator ()	fmatrix.h	/^    double& operator()(int i, int j) { return _x[i+j*I]; } $/;"	f	class:FMatrix
+operator ()	fvector.h	/^    double  operator()(int i) const { return _x[i]; }$/;"	f	class:FVector
+operator ()	fvector.h	/^    double& operator()(int i) { return _x[i]; }$/;"	f	class:FVector
+operator *	fmatrix.h	/^FMatrix<I,J> operator*(const FMatrix<I,J> &A, double x) {$/;"	f
+operator *	fmatrix.h	/^FMatrix<I,J> operator*(const FMatrix<I,K> &A, const FMatrix<K,J> &B) {$/;"	f
+operator *	fmatrix.h	/^FMatrix<I,J> operator*(double x, const FMatrix<I,J> &A) {$/;"	f
+operator *	fmatrix.h	/^FVector<I> operator*(const FMatrix<I,J> &A, const FVector<J> &x) {$/;"	f
+operator *	fmatrix.h	/^FVector<I> operator*(const FVector<J> &x, const FMatrix<J,I> &A) {$/;"	f
+operator *	fvector.h	/^FVector<I> operator*(const FVector<I> &x, const double a) {$/;"	f
+operator *	fvector.h	/^FVector<I> operator*(const double a, FVector<I> x) {$/;"	f
+operator *=	fvector.h	/^FVector<I>& operator*=(FVector<I> &x, double a) {$/;"	f
+operator +	fmatrix.h	/^FMatrix<I,J> operator+(const FMatrix<I,J> &x, const FMatrix<I,J> &y) {$/;"	f
+operator +	fvector.h	/^FVector<N> operator+(FVector<N> x, const FVector<N> &y) {$/;"	f
+operator +=	fmatrix.h	/^FMatrix<I,J>& operator+=(FMatrix<I,J> &x, const FMatrix<I,J> &y) {$/;"	f
+operator +=	fvector.h	/^FVector<N>& operator+=(FVector<N> &x, const FVector<N> &y) {$/;"	f
+operator +=	fvector.h	/^FVector<N>& operator+=(FVector<N> &x, double y) {$/;"	f
+operator -	fmatrix.h	/^FMatrix<I,J> operator-(const FMatrix<I,J> &x, const FMatrix<I,J> &y) {$/;"	f
+operator -	fvector.h	/^FVector<N> operator-(FVector<N> x, const FVector<N> &y) {$/;"	f
+operator -	fvector.h	/^FVector<N> operator-(FVector<N> x, double y) {$/;"	f
+operator -=	fmatrix.h	/^FMatrix<I,J>& operator-=(FMatrix<I,J> &x, const FMatrix<I,J> &y) {$/;"	f
+operator -=	fvector.h	/^FVector<N> operator-=(FVector<N> &x, double y) {$/;"	f
+operator -=	fvector.h	/^FVector<N>& operator-=(FVector<N> &x, const FVector<N> &y) {$/;"	f
+operator /	fvector.h	/^FVector<I> operator\/(FVector<I> x, double a) {$/;"	f
+operator <<	fmatrix.h	/^std::ostream& operator<<(std::ostream &o, const FMatrix<M,N> &A) {$/;"	f
+operator <<	fvector.h	/^std::ostream& operator<<(std::ostream &o, const FVector<N> &x) {$/;"	f
+operator <<	string_tools.h	/^std::ostream& operator<<(std::ostream& o, std::vector<T> x) {$/;"	f
+operator []	input_file.cpp	/^const std::string& InputFile::operator[](const std::string &key) const {$/;"	f	class:InputFile
+operator []	md_system.h	/^    const FVector<3>& operator[](int i) const { return _step.atom_coords[i]; }$/;"	f	class:MDSystem
+outer	fmatrix.h	/^FMatrix<M,N> outer(const FVector<M> &x, const FVector<N> &y) {$/;"	f
+output_trajectory	slip.cpp	/^void output_trajectory(std::string out, int frame, MDSystem &sys,$/;"	f
+perform_all_e2e	compute.cpp	/^void Compute::perform_all_e2e(std::string out) {$/;"	f	class:Compute
+pi	builder.cpp	/^const double pi = acos(-1.0);$/;"	v
+pi	compute.cpp	/^const double pi = acos(-1.0);$/;"	v
+pi	end_bridge.cpp	/^const double pi = acos(-1.0);$/;"	v
+pi	slip.cpp	/^const double pi = acos(-1.0);$/;"	v
+pivot	fmatrix.h	/^    int pivot[N];$/;"	m	struct:LUDecomposition
+post_process	main.cpp	/^void post_process(const InputFile &opt) {$/;"	f
+post_slip	main.cpp	/^void post_slip(const InputFile &opt) {$/;"	f
+rand	fvector.h	/^FVector<N> rand() {$/;"	f
+rand_unit	fvector.h	/^template <> inline FVector<2> rand_unit() {$/;"	f
+rand_unit	fvector.h	/^template <> inline FVector<3> rand_unit() {$/;"	f
+read_data	md_system.cpp	/^void read_data(std::string datapath, MDSystem &sys) {$/;"	f
+read_line	string_tools.h	/^inline std::string read_line(std::fstream &fid) {$/;"	f
+read_movable_atom	compute.cpp	/^AtomSet read_movable_atom(std::string movable_atom_path) {$/;"	f
+read_trajectory	slip.cpp	/^void read_trajectory(std::string trjpath, std::vector<int> frames,$/;"	f
+rows	fmatrix.h	/^    constexpr int rows() const { return I; }$/;"	f	class:FMatrix
+s	geometry.h	/^    double s;$/;"	m	class:Geometry
+scalar_product	fmatrix.h	/^double scalar_product(const FMatrix<I,J> &A, const FMatrix<I,J> &B) {$/;"	f
+scaled_add	fvector.h	/^    void scaled_add(const FVector &v, double s=1.0) {$/;"	f	class:FVector
+segment_around	slip.cpp	/^AtomSet Slip::segment_around(int i, int n) {$/;"	f	class:Slip
+segment_entry_points	end_bridge.cpp	/^AtomSet MonteCarlo::segment_entry_points(int id) const {$/;"	f	class:MonteCarlo
+segment_points	end_bridge.cpp	/^AtomSet MonteCarlo::segment_points(int id) const {$/;"	f	class:MonteCarlo
+select_target_bond	end_bridge.cpp	/^int MonteCarlo::select_target_bond(int A, int T) const {$/;"	f	class:MonteCarlo
+set_bounds	md_system.h	/^    void set_bounds(double xlo, double xhi, $/;"	f	class:MDSystem
+shortest_path	end_bridge.cpp	/^AtomSet MonteCarlo::shortest_path(int id1, int id2) const {$/;"	f	class:MonteCarlo
+sign	fvector.h	/^FVector<N> sign(FVector<N> v) {$/;"	f
+size	fvector.h	/^    int size() const { return N; }$/;"	f	class:FVector
+size	md_system.h	/^    size_t size() const { return _step.atom_coords.size(); }$/;"	f	class:MDSystem
+slice_angle_energy	compute.cpp	/^Slice Compute::slice_angle_energy(int n_slices, std::string anglepath) const {$/;"	f	class:Compute
+slice_bond_energy	compute.cpp	/^Slice Compute::slice_bond_energy(int n_slices) const {$/;"	f	class:Compute
+slice_bond_orientation	compute.cpp	/^Slice Compute::slice_bond_orientation(int n_slices) const {$/;"	f	class:Compute
+slice_density	compute.cpp	/^std::vector<FVector<3>> Compute::slice_density(int n_slices) const {$/;"	f	class:Compute
+slice_loop_bond_orientation	compute.cpp	/^Slice Compute::slice_loop_bond_orientation(int n_slices,$/;"	f	class:Compute
+slice_pair_energy	compute.cpp	/^Slice Compute::slice_pair_energy(int n_slices, std::string pairpath) const {$/;"	f	class:Compute
+slip_vector	slip.cpp	/^CS Slip::slip_vector(double cutoff, int n_neighbor) {$/;"	f	class:Slip
+split	string_tools.h	/^inline std::vector<std::string> split(std::string s, std::string delims=" \\t\\n\\r")$/;"	f
+startswith	string_tools.h	/^inline bool startswith(const string &s, const char *beg) {$/;"	f
+step	fvector.h	/^inline FVector<I> step(const FVector<I> &v) {$/;"	f
+step_x	geometry.h	/^    double step_x, step_y, step_z;$/;"	m	class:Geometry
+step_y	geometry.h	/^    double step_x, step_y, step_z;$/;"	m	class:Geometry
+step_z	geometry.h	/^    double step_x, step_y, step_z;$/;"	m	class:Geometry
+str2dbl	string_tools.h	/^inline double str2dbl(const std::string &s) {$/;"	f
+str2u32	string_tools.h	/^inline unsigned str2u32(const std::string &s) {$/;"	f
+sum	fvector.h	/^double sum(const FVector<I> &x) {$/;"	f
+sum	fvector.h	/^inline double sum(const std::vector<double> &x) {$/;"	f
+tail_atoms	end_bridge.cpp	/^AtomSet MonteCarlo::tail_atoms(const AtomSet &ends) const {$/;"	f	class:MonteCarlo
+time_frame	slip.cpp	/^AtomSet time_frame(std::string trjpath) {$/;"	f
+timestep	md_system.h	/^    int timestep = 0;$/;"	m	struct:StepData
+transpose	fmatrix.h	/^inline FMatrix<J,I> transpose(const FMatrix<I,J> &A) {$/;"	f
+trim	string_tools.h	/^inline std::string trim(std::string s, std::string ws=" \\t\\n\\r") {$/;"	f
+type	md_system.h	/^    const int& type(int id) const { return _step.atom_types[id]; }$/;"	f	class:MDSystem
+update_atom_coordinate	md_system.cpp	/^void MDSystem::update_atom_coordinate(std::vector<FVector<3>> coords) {$/;"	f	class:MDSystem
+update_atom_cs	md_system.cpp	/^void MDSystem::update_atom_cs(std::vector<double> css) {$/;"	f	class:MDSystem
+update_atom_mol	md_system.cpp	/^void MDSystem::update_atom_mol(std::vector<int> mols) {$/;"	f	class:MDSystem
+update_atom_type	md_system.cpp	/^void MDSystem::update_atom_type(std::vector<int> types) {$/;"	f	class:MDSystem
+update_atom_vm	md_system.cpp	/^void MDSystem::update_atom_vm(std::vector<double> vms) {$/;"	f	class:MDSystem
+upper_root_coordinate	geometry.h	/^    double upper_root_coordinate() const { return (hi_amorphous_z+1)*step_z; }$/;"	f	class:Geometry
+velocity	md_system.h	/^    const FVector<3>& velocity(int id) const { return _step.atom_velcs[id]; }$/;"	f	class:MDSystem
+vm	md_system.h	/^    const double& vm(int id) const { return _step.atom_vms[id]; }$/;"	f	class:MDSystem
+warp_atoms	md_system.cpp	/^void MDSystem::warp_atoms() {$/;"	f	class:MDSystem
+write_amorphous_atoms	builder.cpp	/^void Builder::write_amorphous_atoms(std::string path) const {$/;"	f	class:Builder
+write_chains	compute.cpp	/^void Compute::write_chains(std::string chain_file) {$/;"	f	class:Compute
+write_end_atoms	compute.cpp	/^void Compute::write_end_atoms(std::string end_file) {$/;"	f	class:Compute
+write_movable_atoms	builder.cpp	/^void Builder::write_movable_atoms(std::string path) const {$/;"	f	class:Builder
+write_root_atoms	builder.cpp	/^void Builder::write_root_atoms(std::string path) const {$/;"	f	class:Builder
+write_to_lammps	lammps_writer.cpp	/^void write_to_lammps(const MDSystem &system, std::string lmpdatafile) {$/;"	f
+x_min	table.h	/^    double x_min() const { return _x.front(); }$/;"	f	class:Table
+zeros	fmatrix.h	/^FMatrix<M,N> zeros() {$/;"	f
+zeros	fvector.h	/^FVector<N> zeros() {$/;"	f

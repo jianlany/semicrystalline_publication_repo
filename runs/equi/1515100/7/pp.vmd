@@ -1,0 +1,59 @@
+# VMD for LINUXAMD64, version 1.9.1 (February 1, 2012)
+# Log file '/home/saturas/development/semicrystalline/runs/pe-end-bridging-test/use/pp.vmd', created by user saturas
+# Use 'play pp.vmd' in Tk console to run this script.
+# Or use 'vmd -dispdev text -e pp.vmd' to run from command line
+
+##mol new {cg-npt-step_83329_modified.lammpstrj} type {lammpstrj} first 0 last -1 step 1 waitfor 1
+#mol addfile cg-npt-step_83329_modified.lammpstrj autobonds off waitfor -1
+
+menu tkcon off
+menu tkcon on
+display resetview
+display projection Orthographic
+display depthcue off
+rotate x by -90.000000
+rotate y by -30.000000
+rotate x by 10.000000
+
+menu color off
+menu color on
+color Display Background white
+color change rgb 7 green 0.000000 0.820000 0.000000
+color change rgb 1 red 0.790000 0.000000 0.000000
+color change rgb 3 orange 0.960000 0.720000 0.000000
+color Type 0 silver
+color Type 1 green
+color Type 2 red
+color Type 3 orange
+color Type 4 green
+color Type 5 red
+color Type 6 orange
+menu color off
+
+mol modcolor 0 0 Type
+mol modstyle 0 0 DynamicBonds 2.900000 0.55000 32.000000
+mol modmaterial 0 0 AOChalky
+mol color Type
+mol representation DynamicBonds 2.900000 0.55000 32.000000
+mol selection all
+mol material AOChalky
+mol addrep 0
+mol modstyle 1 0 VDW 1.200000 64.000000
+
+scale by 1.500000
+#display resize 1000 1000
+
+menu display off
+menu display on
+display shadows on
+display ambientocclusion on
+display aodirect 0.800000
+display aoambient 0.300000
+menu display off
+
+#mol delrep 0 0
+axes location Off
+menu graphics off
+
+#render Tachyon vmdscene.dat tachyon -aasamples 24 -fullshade -res 2000 2000 %s -format PNG -o sys.png
+#exit

@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --job-name equi
+#SBATCH --nodes 1
+#SBATCH --ntasks 16
+#SBATCH --time 200:00:00
+#SBATCH --error=job.%J.out --output=job.%J.out
+
+lmp_path='/home/saturas/development/lammps2015-bondangle-eam/lammps-10Aug15/src/lmp_mpi'
+mpiexec ${lmp_path} -i in.lammps
+

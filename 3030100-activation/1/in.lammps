@@ -1,0 +1,57 @@
+###################################################
+# Low pressure value (substitute in with sed)
+variable pvalue equal PRESSURE_VALUE
+variable tvalue equal TEMPERATURE_VALUE
+variable fname  equal FNAME_VALUE
+
+# Initialization
+log             diffusion.log
+units           real
+atom_style      angle
+boundary        p p p 
+
+####################################################
+# Forcefield parameters
+
+bond_style      harmonic
+pair_style      table linear 1001 
+angle_style     table linear 1001
+
+read_data       ../cg-nvt-step_109991-start-diffusion.lammps
+
+bond_coeff      1 113.746321 2.573622
+pair_coeff      * * ../../pair.table.EE.44 EE
+angle_coeff     1 ../../angle.table.EEE.44 EEE
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+special_bonds   lj/coul 0.0 0.0 1.0 
+
+####################################################
+timestep        5
+thermo_style    custom step temp press ke pe enthalpy vol lx ly lz pxx pyy pzz
+thermo          100
+fix             1 all nvt temp ${tvalue} ${tvalue} 500 
+run             100
+reset_timestep  0
+
+#! Have to run for some time steps first (above),
+#! then we can calculate MSD in multiple run segments (below).
+compute         chk  all chunk/atom type  # Define each chunk according to atom-type.
+                                          # Crystalline beads have type starts from 2, 3, ...
+compute         com  all com/chunk chk    # Chunk center-of-mass position in unwraped coornidate
+compute         msd  all msd/chunk chk
+compute         st all  pressure thermo_temp   # st - pressure, pxx, pyy, pzz, pxy, pxz, pyz
+
+fix             3 all ave/time 1 200000 200000 c_st[0] c_st[1] c_st[2] c_st[3] c_st[4] c_st[5] c_st[6] file stress.txt
+dump            1 all custom 200000 nvt-100ns.lammpstrj id mol type x y z
+dump_modify     1 sort id
+
+fix             4 all ave/time 1 1 10000 c_msd[4] file msd.txt mode vector
+fix             5 all ave/time 1 1 10000 c_com[1] c_com[2] c_com[3] file com.txt mode vector
+run             60000000  # 20000000
+write_data      nvt-300ns.lammps  # nvt-100ns.lammps
+write_restart   nvt-300ns.restart
+unfix           4
+unfix           5
+

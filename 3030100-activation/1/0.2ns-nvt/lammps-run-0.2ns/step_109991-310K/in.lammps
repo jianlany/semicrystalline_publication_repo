@@ -1,0 +1,36 @@
+###################################################
+# Low pressure value (substitute in with sed)
+variable pvalue equal 1
+variable tvalue equal 310
+variable fname  equal step_109991
+
+# Initialization
+log             cg-equi.log
+units           real
+atom_style      angle
+boundary        p p p 
+
+####################################################
+# Forcefield parameters
+
+bond_style      harmonic
+pair_style      table linear 1001 
+angle_style     table linear 1001
+
+read_data       cg-npt4-step_109991.lammps
+
+bond_coeff      1 113.746321 2.573622
+pair_coeff      1 1 ../pair.table.EE.44 EE
+angle_coeff     1 ../angle.table.EEE.44 EEE
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+special_bonds   lj/coul 0.0 0.0 1.0 
+
+####################################################
+timestep        5
+thermo_style    custom step temp press ke pe enthalpy vol lx ly lz pxx pyy pzz
+thermo          100
+fix             1 all nvt temp ${tvalue} ${tvalue} 500 
+run             40000
+write_data      cg-nvt-step_109991-start.lammps
